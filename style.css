@@ -95,11 +95,17 @@ body {
   grid-template-rows: 1fr 1fr;
   box-shadow: 0 0.5rem 0.5rem #bababb;
 }
+h2 {
+  margin: 0;
+}
 button {
   height: 2rem;
   width: 10rem;
   appearance: none;
   border-radius: 25px;
+  background-color: rgb(54, 147, 209);
+  color: #fff;
+  border: none;
 }
 .banner-profile {
   display: grid;
@@ -128,6 +134,100 @@ button {
   z-index: -1;
 }
 .main > * {
-  /* border: 1px dotted green; */
   padding: 2rem 1rem;
+}
+
+.project-item,
+.content,
+.people {
+  box-shadow: 0 3px 10px 1px rgb(176, 176, 176);
+}
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+}
+.project-item {
+  position: relative;
+  height: 160px;
+  border: 1px dotted black;
+  border-left: 0.5rem solid orange;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+}
+.project-item > p {
+  margin: 0;
+}
+.project-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.icon > * {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+.icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+/* aside */
+.aside {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 1rem;
+  padding: 0;
+  margin: 3rem 5rem 3rem 1rem;
+}
+.content > p:nth-child(2) {
+  border-bottom: 1px solid #bababb;
+  border-top: 1px solid #bababb;
+}
+.content {
+  height: fit-content;
+  display: grid;
+  margin: 0 2rem;
+  padding: 1rem;
+  grid-template-rows: repeat(auto-fit, minmax(70px, 1fr));
+  background-color: #fff;
+  border-radius: 0.75rem;
+}
+.content-item > h4,
+.content-item > p {
+  margin: 0;
+}
+.content-item {
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+.content-item:nth-child(2) {
+  border-bottom: 1px solid #bababb;
+  border-top: 1px solid #bababb;
+}
+.people {
+  margin: 0 2rem;
+  padding: 1rem 1rem;
+  background-color: #fff;
+  border-radius: 0.75rem;
+}
+.people > .profile {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.profile > .name {
+  padding-left: 0.5rem;
+}
+
+.announcement-title,
+.trending-title {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
 }
